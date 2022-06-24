@@ -9,6 +9,8 @@ export default function SuccessPage() {
     const urlParams = new URLSearchParams(queryString);
     const PayerId = urlParams.get('PayerID')
     const PaymentId = urlParams.get('paymentId')
+   
+
     useEffect(() => {
         fetch(`https://localhost:7191/Cart/check-valid-payment-id?paymentId=${PaymentId}&payerId=${PayerId}`)
 
@@ -20,7 +22,16 @@ export default function SuccessPage() {
                 .then(res => {
                     if(res.status === 200){
                         localStorage.removeItem('cartId')
-                        sessionStorage.removeItem('cartId')
+                        fetch(`https://localhost:7191/Cart/send-email?cartId=${sessionStorage.getItem('cartId')}`, {
+                            method: 'POST',
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data)
+                            sessionStorage.removeItem('cartId')
+                        }
+                        )
+                        .catch(err => console.log(err))
                     }
                     else{
                         alert("error")
@@ -32,6 +43,8 @@ export default function SuccessPage() {
             }
         })
     }, [])
+ 
+ 
 
 
     return (
@@ -49,7 +62,7 @@ export default function SuccessPage() {
                 </div>
             </div>
         <div class="jumbotron text-center">
-        <h1 class="display-3">Cảm Ơn Bạn!</h1>
+        <h1 class="display-3">Cảm ơn bạn đã mua hàng tại Hey Readers!</h1>
         <p class="lead"><strong>Kiểm tra lịch sử đơn hàng</strong> để biết tình trạng hiện tại của đơn hàng</p>
         <br/>
         <hr/>

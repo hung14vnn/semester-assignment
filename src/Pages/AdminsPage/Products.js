@@ -200,6 +200,31 @@ const handleViewShow = (product) => {
         setProduct(product);
         setViewShow(true);
     }
+const date = new Date().getDate();
+const month = new Date().getMonth()+ 1;
+const year = new Date().getFullYear();
+const handleClick = (event) => {
+      event.preventDefault();
+    
+     fetch(`https://localhost:7191/Product/export`, {
+        method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      })
+      .then(res => res.blob())
+      .then(blob => {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `Bao-cao-san-pham-ngay-${date}-thang-${month}-nam-${year}.xlsx`;
+          a.click();
+          window.URL.revokeObjectURL(url);
+      }
+      )
+      .catch(error =>
+          alert(error.message));      
+    } 
   const Root = styled('div')`
   table {
     font-family: arial, sans-serif;
@@ -342,6 +367,11 @@ return isAdmin ? (
                  </tbody>
                 </table>
                 </Root>
+                <div className="col-md-1 mx-auto mt-5">
+                <button onClick={handleClick} className="btn btn-danger">
+                    Tải file EXCEL 
+                </button>
+                </div>
                 <div className="ms-auto mt-5">
                     <Pagination className="my-auto">
                         <Pagination.Item>Total page: {data.totalPages} </Pagination.Item>

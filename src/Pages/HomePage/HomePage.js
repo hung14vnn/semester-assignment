@@ -307,7 +307,7 @@ export default function UserPage() {
   </Carousel.Item>
 </Carousel>
     
-    <p style={{textAlign: 'center', marginTop: '10px'}}>CHÀO MỪNG BẠN ĐẾN VỚI CỬA HÀNG SÁCH TH BOOKS</p>
+    <p style={{textAlign: 'center', marginTop: '10px'}}>CHÀO MỪNG BẠN ĐẾN VỚI CỬA HÀNG SÁCH HEY READERS</p>
     <p style={{textAlign: 'center', marginTop: '10px'}}>
 Sẵn sàng thưởng thức hàng ngàn cuốn sách, miễn phí giao hàng cho bất kì hoá đơn nào giá trị lớn hơn 100.000 VNĐ!</p>
 <hr />
@@ -386,7 +386,7 @@ Sẵn sàng thưởng thức hàng ngàn cuốn sách, miễn phí giao hàng ch
 
         <div className="row">
         <div className="col-md-6">
-            <h3>Ứng dụng TH Books đã có sẵn trên di động</h3>
+            <h3>Hey Readers đã có mặt trên di động</h3>
             <p>Lựa chọn đường dẫn theo hệ điều hành của bạn</p>
         </div>
         <div className="col-md-6 text-md-right">

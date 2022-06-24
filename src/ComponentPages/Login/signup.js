@@ -94,7 +94,7 @@ export default function Signup() {
        <div className="col-xl-2 col-lg-3 col-md-4 col-6 ml-5">
                     <div className="logo">
                         <a href="/">
-                            <img src="assets/images/logos/black.png" alt="logo" width="150px" />
+                            <img src="assets/images/logos/black.png" alt="logo" width="250px" />
                         </a>
                     </div>
                 </div>

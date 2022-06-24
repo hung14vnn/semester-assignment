@@ -15,7 +15,7 @@ export default function Footer() {
               <aside className="col-md col-6">
                 <h6 className="title">Nhà Xuất Bản</h6>
                 <ul className="list-unstyled">
-                  <li> <a href="#" style={{textDecoration:"none"}}>Kim Đồng</a></li>
+                  <li> <a href="#"  style={{textDecoration:"none"}}>Kim Đồng</a></li>
                   <li> <a href="#"  style={{textDecoration:"none"}}>Thanh Niên</a></li>
                   <li> <a href="#"  style={{textDecoration:"none"}}>TP HCM</a></li>
                   <li> <a href="#"  style={{textDecoration:"none"}}>Hà Nội</a></li>
@@ -24,7 +24,7 @@ export default function Footer() {
               <aside className="col-md col-6">
                 <h6 className="title">Công ty</h6>
                 <ul className="list-unstyled">
-                  <li> <a href="#" style={{textDecoration:"none"}}>Về Chúng Tôi</a></li>
+                  <li> <a href="#" style={{textDecoration:"none"}}>Về Hey Readers</a></li>
                   <li> <a href="#" style={{textDecoration:"none"}}>Kinh Doanh</a></li>
                   <li> <a href="#" style={{textDecoration:"none"}}>Tìm Đường</a></li>
                   <li> <a href="#" style={{textDecoration:"none"}}>Điều Khoản Sử Dụng</a></li>
@@ -47,7 +47,7 @@ export default function Footer() {
                   <li> <a href="#" style={{textDecoration:"none"}}> Đăng Nhập</a></li>
                   <li> <a href="#" style={{textDecoration:"none"}}> Đăng Kí</a></li>
                   <li> <a href="#" style={{textDecoration:"none"}}> Cài Đặt Tài Khoản </a></li>
-                  <li> <a href="#" style={{textDecoration:"none"}}> Đơn Hàng Của Tôi </a></li>
+                  <li> <a href="#"> Đơn Hàng Của Tôi </a></li>
                 </ul>
               </aside>
               <aside className="col-md">
@@ -64,7 +64,7 @@ export default function Footer() {
 
           <section className="footer-bottom row">
             <div className="col-md-2">
-              <p className="text-muted">2022 TH Books</p>
+              <p className="text-muted">2022 Hey Readers</p>
             </div>
             <div className="col-md-8 text-md-center">
               <a style={{textDecoration:"none"}} href="

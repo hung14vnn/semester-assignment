@@ -1,10 +1,21 @@
-import React, {} from 'react';
+import React, {useEffect} from 'react';
 import Navbar from '../../ComponentPages/Navbar';
 import Footer from '../../ComponentPages/Footer';
 
 
 export default function SuccessCODPage() {
-   
+    useEffect(() => {
+        fetch(`https://localhost:7191/Cart/send-email?cartId=${sessionStorage.getItem("cartId")}`, {  
+           method: 'POST',
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                sessionStorage.removeItem('cartId')
+            }
+            )
+            .catch(err => console.log(err))
+    }, []);
     return (
         <div>
             <Navbar/>
@@ -20,7 +31,7 @@ export default function SuccessCODPage() {
                 </div>
             </div>
         <div class="jumbotron text-center">
-        <h1 class="display-3">Cảm Ơn Bạn!</h1>
+        <h1 class="display-3">Cảm ơn bạn đã mua hàng tại Hey Readers!</h1>
         <p class="lead"><strong>Kiểm tra lịch sử đơn hàng</strong> để biết tình trạng hiện tại của đơn hàng</p>
         <br/>
         <hr/>

@@ -127,7 +127,6 @@ export default function Checkout() {
                 },
             }).then(res => {
                 window.location.href = `/success/${sessionStorage.getItem("cartId")}`
-                sessionStorage.removeItem("cartId");
                 sessionStorage.removeItem("paymentMethod");
             })
             .catch(err => {
@@ -140,7 +139,7 @@ export default function Checkout() {
         (async () => {
             await axios({
                 method: 'GET',
-                url: `https://localhost:7191/Cart/purchase-cart-paypal?totalPrice=${((total*1.05 +(total > 100000 ? 0 : 30000))/23170).toFixed(2)}`,
+                url: `https://localhost:7191/Cart/purchase-cart-paypal?totalPrice=${((total*1.05 +(total > 100000 ? 0 : 30000))/23101).toFixed(2)}`,
                 headers: {
                     'Content-Type': 'application/json',
                 },
